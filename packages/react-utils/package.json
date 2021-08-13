@@ -1,0 +1,32 @@
+{
+  "name": "@skcjs/react-utils",
+  "version": "0.1.0",
+  "description": "",
+  "license": "MIT",
+  "author": {
+    "name": "Kwoncheol Shin",
+    "email": "hello@kwoncheol.me"
+  },
+  "files": [
+    "dist",
+    "use-force-render",
+    "use-previous",
+    "use-utility-state"
+  ],
+  "module": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "prebuild": "rm -rf dist",
+    "build": "pnpm prebuild && esbuild src/** --outdir=dist --format=esm && pnpm typedef",
+    "typedef": "tsc --emitDeclarationOnly --outDir dist"
+  },
+  "peerDependencies": {
+    "react": "^16.8.0 || ^17.0.0"
+  },
+  "devDependencies": {
+    "@types/react": "^17.0.17",
+    "esbuild": "^0.12.20",
+    "react": "^17.0.2",
+    "typescript": "^4.3.5"
+  }
+}
