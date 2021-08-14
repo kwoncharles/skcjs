@@ -4,7 +4,8 @@
     "jsx": "react",
     "rootDir": "src",
     "outDir": "dist",
-    "declarationDir": "dist"
+    "declarationDir": "dist",
+    "emitDeclarationOnly": true
   },
   "include": [
     "src"

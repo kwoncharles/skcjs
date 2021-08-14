@@ -18,14 +18,17 @@
   "types": "dist/index.d.ts",
   "scripts": {
     "prebuild": "rm -rf dist",
-    "build": "pnpm prebuild && esbuild src/** --outdir=dist --format=esm && pnpm typedef",
-    "typedef": "tsc --emitDeclarationOnly --outDir dist"
+    "build": "concurrently \"pnpm:build:*\"",
+    "build:module": "esbuild src/** --outdir=dist --format=esm",
+    "build:ts": "tsc",
+    "prepack": "pnpm prebuild && pnpm build"
   },
   "peerDependencies": {
     "react": "^16.8.0 || ^17.0.0"
   },
   "devDependencies": {
     "@types/react": "^17.0.17",
+    "concurrently": "^6.2.1",
     "esbuild": "^0.12.20",
     "react": "^17.0.2",
     "typescript": "^4.3.5"
