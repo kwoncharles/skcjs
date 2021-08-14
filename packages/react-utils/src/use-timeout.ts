@@ -5,7 +5,7 @@ type TimeoutProps = {
   clearOnUnmount?: boolean;
 };
 
-type TimeoutResult = typeof window.setTimeout;
+type TimeoutResult = (...params: Parameters<typeof window.setTimeout>) => number;
 
 export function useTimeout({
   allowMultipleTimeout = false,
@@ -14,7 +14,7 @@ export function useTimeout({
   const clearToken = useRef<number>();
   const clearTokenArray = useRef<number[]>([]);
 
-  const createTimeout: typeof window.setTimeout = useCallback(
+  const createTimeout: TimeoutResult = useCallback(
     (...params) => {
       const currentToken = window.setTimeout(...params);
 
