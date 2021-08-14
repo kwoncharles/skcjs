@@ -21,7 +21,7 @@ export function useUtilityState(
 export function useUtilityState(
   initialState: boolean | (() => boolean),
   type: 'open-close'
-): [boolean, { open: () => void; close: () => void }];
+): [boolean, { open: () => void; close: () => void, toggle: () => void }];
 
 export function useUtilityState(
   initialState: number | (() => number),
@@ -69,6 +69,7 @@ export function useUtilityState<T>(
     return [state, {
       open: setTrue,
       close: setFalse,
+      toggle: toggleState,
     }];
   }
 
