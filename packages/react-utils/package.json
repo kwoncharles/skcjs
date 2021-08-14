@@ -11,7 +11,8 @@
     "dist",
     "use-force-render",
     "use-previous",
-    "use-utility-state"
+    "use-utility-state",
+    "use-timeout"
   ],
   "module": "dist/index.js",
   "types": "dist/index.d.ts",
