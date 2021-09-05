@@ -12,7 +12,8 @@
     "use-force-render",
     "use-previous",
     "use-utility-state",
-    "use-timeout"
+    "use-timeout",
+    "use-warning-controlled-status-changed"
   ],
   "module": "dist/index.js",
   "types": "dist/index.d.ts",
