@@ -13,6 +13,7 @@
     "use-previous",
     "use-utility-state",
     "use-unmounted-ref",
+    "use-safe-state",
     "use-timeout",
     "use-warning-controlled-status-changed"
   ],
