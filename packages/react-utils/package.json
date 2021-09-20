@@ -12,6 +12,7 @@
     "use-force-render",
     "use-previous",
     "use-utility-state",
+    "use-unmounted-ref",
     "use-timeout",
     "use-warning-controlled-status-changed"
   ],
