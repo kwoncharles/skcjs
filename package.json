@@ -8,5 +8,11 @@
   "author": {
     "name": "Kwoncheol Shin",
     "email": "hello@kwoncheol.me"
+  },
+  "devDependencies": {
+    "plop": "^2.7.4"
+  },
+  "scripts": {
+    "plop": "plop --plopfile scripts/plopfile.js"
   }
 }
